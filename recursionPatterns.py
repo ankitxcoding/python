@@ -322,6 +322,113 @@ def triangleStarsInverse(n, s=1):
     #     *
 
 
+def triangleStarsUpSideDown(n, s=1):
+    if s > n:
+        return
+
+    print(" " * (n - s) + "*" * (2 * s - 1))
+    triangleStarsUpSideDown(n, s + 1)
+    print(" " * (n - s) + "*" * (2 * s - 1))
+
+    # Output -
+
+    #     *
+    #    ***
+    #   *****
+    #  *******
+    # *********
+    # *********
+    #  *******
+    #   *****
+    #    ***
+    #     *
+
+
+def starsLadderUpSideDown(n, k=1):
+    if k > n:
+        return
+
+    print("*" * k)
+    starsLadderUpSideDown(n, k + 1)
+    print("*" * (k - 1))
+
+    # Output -
+
+    # *
+    # **
+    # ***
+    # ****
+    # *****
+    # ****
+    # ***
+    # **
+    # *
+
+
+def oneZeroTrianglePattern(n, k=1):
+    def printFurther(x):
+        if x == 0:
+            print()
+            return
+
+        print((x + 1) % 2, end=" ")
+        printFurther(x - 1)
+
+    if k > n:
+        return
+
+    printFurther(k)
+    oneZeroTrianglePattern(n, k + 1)
+
+    # Output -
+
+    # 0
+    # 1 0
+    # 0 1 0
+    # 1 0 1 0
+    # 0 1 0 1 0
+
+
+def numbersMirrorPattern(n, k=1):
+    def printRow1(x):
+        if x == 0:
+            return
+
+        printRow1(x - 1)
+        print(x, end="")
+
+    def spaces(x):
+        if x == 0:
+            return
+
+        print(" ", end="")
+        spaces(x - 1)
+
+    def printRow2(x):
+        if x == 0:
+            return
+
+        print(x, end="")
+        printRow2(x - 1)
+
+    if k > n:
+        return
+
+    printRow1(k)
+    spaces(2 * (n - k))
+    printRow2(k)
+    print()
+    numbersMirrorPattern(n, k + 1)
+
+    # Output -
+
+    # 1        1
+    # 12      21
+    # 123    321
+    # 1234  4321
+    # 1234554321
+
+
 n = int(input())
 
 # printNto1(n)
@@ -357,3 +464,11 @@ n = int(input())
 # triangleStars(n)
 
 # triangleStarsInverse(n)
+
+# triangleStarsUpSideDown(n)
+
+# starsLadderUpSideDown(n)
+
+# oneZeroTrianglePattern(n)
+
+numbersMirrorPattern(n)
