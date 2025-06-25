@@ -253,6 +253,14 @@ def printNto1LadderCol(n):
     printRow(n)
     print()
 
+    # Output -
+
+    # 1
+    # 21
+    # 321
+    # 4321
+    # 54321
+
 
 def printNto1LadderColInverse(n):
     def printRow(k):
@@ -306,6 +314,6 @@ n = int(input())
 
 # print1ToNLadderColInverse(n)
 
-printNto1LadderCol(n)
+# printNto1LadderCol(n)
 
 # printNto1LadderColInverse(n)
