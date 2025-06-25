@@ -429,6 +429,31 @@ def numbersMirrorPattern(n, k=1):
     # 1234554321
 
 
+def countingNumbers(n, k=1, x=1):
+    def counter(a, b):
+        if a == 0:
+            return b
+
+        b = counter(a - 1, b)
+        print(b, end=" ")
+        return b + 1
+
+    if k > n:
+        return
+
+    counter(k, x)
+    print()
+    countingNumbers(n, k + 1, x + k)
+
+    # Output -
+
+    # 1
+    # 2 3
+    # 4 5 6
+    # 7 8 9 10
+    # 11 12 13 14 15
+
+
 n = int(input())
 
 # printNto1(n)
@@ -471,4 +496,6 @@ n = int(input())
 
 # oneZeroTrianglePattern(n)
 
-numbersMirrorPattern(n)
+# numbersMirrorPattern(n)
+
+countingNumbers(n)
