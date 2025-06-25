@@ -78,7 +78,7 @@ def printNto1and1toN(n):
     # 5
 
 
-def print1toNandNto1(n, x):
+def print1toNandNto1(n, x=1):
     if x > n:
         return
 
@@ -128,7 +128,7 @@ def printStars(n, x):
     # *****
 
 
-def print1toNStars(n, x):
+def print1toNStars(n, x=1):
     if n == 0:
         return
 
@@ -286,6 +286,38 @@ def printNto1LadderColInverse(n):
     # 1
 
 
+def triangleStars(n, s=1):
+    if s > n:
+        return
+
+    print(" " * (n - s) + "*" * (2 * s - 1))
+    triangleStars(n, s + 1)
+
+    # Output -
+
+    #     *
+    #    ***
+    #   *****
+    #  *******
+    # *********
+
+
+def triangleStarsInverse(n, s=1):
+    if s > n:
+        return
+
+    triangleStarsInverse(n, s + 1)
+    print(" " * (n - s) + "*" * (2 * s - 1))
+
+    # Output -
+
+    # *********
+    #  *******
+    #   *****
+    #    ***
+    #     *
+
+
 n = int(input())
 
 # printNto1(n)
@@ -296,13 +328,13 @@ n = int(input())
 
 # printNto1and1toN(n)
 
-# print1toNandNto1(n, 1)
+# print1toNandNto1(n)
 
 # printDecimalToBinary(n)
 
 # printStars(n, n)
 
-# print1toNStars(n, 1)
+# print1toNStars(n)
 
 # printNto1Stars(n)
 
@@ -317,3 +349,7 @@ n = int(input())
 # printNto1LadderCol(n)
 
 # printNto1LadderColInverse(n)
+
+# triangleStars(n)
+
+# triangleStarsInverse(n)
