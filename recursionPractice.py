@@ -23,7 +23,7 @@ def print1toN(n):
     print1toN(n - 1)
     print(n)
 
-    # this is non-tail recursive soution, because after recursion, there still code left to excecute.
+    # This is non-tail recursive soution, because after recursion, there still code left to excecute, but if can be converted into tail recursive by simply introducing second variable.
 
     # Output -
 
@@ -42,7 +42,7 @@ def printEveryNumberTwiceExeptLargest(n):
     print(n)
     printEveryNumberTwiceExeptLargest(n - 1)
 
-    # this will print every twice except the largest one, largest come into the middle.
+    # This will print every twice except the largest one, largest come into the middle.
     # e.g. for n = 3, output will be 1 2 1 3 1 2 1
 
     # Output -
@@ -107,7 +107,7 @@ def printDecimalToBinary(n):
     printDecimalToBinary(n // 2)
     print(n % 2, end="")
 
-    # in this we are reducing n by dividing with 2 and printing the n by moding with 2 in reverse order i.e. non-tail recursive way, so it will print in reverse manner.
+    # In this we are reducing n by dividing with 2, in the recusive function, so that function meet the base case at some point and printing the n by moding with 2 in reverse order i.e. non-tail recursive way, so it will print in reverse manner.
 
     # Output - 1010
 
@@ -118,6 +118,8 @@ def printStars(n, x):
 
     print("*" * x)
     printStars(n - 1, x)
+
+    # For cases like this always prefer tail recursive approach.
 
     # Output -
 
@@ -168,6 +170,7 @@ def printNto1LadderRow(n):
     printNto1LadderRow(n - 1)
 
     # Output -
+
     # 55555
     # 4444
     # 333
@@ -183,6 +186,7 @@ def print1toNLadderRow(n):
     print(str(n) * n)
 
     # Output -
+
     # 1
     # 22
     # 333
