@@ -5,6 +5,16 @@ def printNto1(n):
     print(n)
     printNto1(n - 1)
 
+    # this is tail recursive solution, because recursion is the last thing which happening in this code, nothing left to execute after recursive call.
+
+    # Output -
+
+    # 5
+    # 4
+    # 3
+    # 2
+    # 1
+
 
 def print1toN(n):
     if n == 0:
@@ -12,6 +22,16 @@ def print1toN(n):
 
     print1toN(n - 1)
     print(n)
+
+    # this is non-tail recursive soution, because after recursion, there still code left to excecute.
+
+    # Output -
+
+    # 1
+    # 2
+    # 3
+    # 4
+    # 5
 
 
 def printEveryNumberTwiceExeptLargest(n):
@@ -25,6 +45,16 @@ def printEveryNumberTwiceExeptLargest(n):
     # this will print every twice except the largest one, largest come into the middle.
     # e.g. for n = 3, output will be 1 2 1 3 1 2 1
 
+    # Output -
+
+    # 1
+    # 2
+    # 1
+    # 3
+    # 1
+    # 2
+    # 1
+
 
 def printNto1and1toN(n):
     if n == 0:
@@ -33,6 +63,19 @@ def printNto1and1toN(n):
     print(n)
     printNto1and1toN(n - 1)
     print(n)
+
+    # Output -
+
+    # 5
+    # 4
+    # 3
+    # 2
+    # 1
+    # 1
+    # 2
+    # 3
+    # 4
+    # 5
 
 
 def print1toNandNto1(n, x):
@@ -43,6 +86,19 @@ def print1toNandNto1(n, x):
     print1toNandNto1(n, x + 1)
     print(x)
 
+    # Output -
+
+    # 1
+    # 2
+    # 3
+    # 4
+    # 5
+    # 5
+    # 4
+    # 3
+    # 2
+    # 1
+
 
 def printDecimalToBinary(n):
     if n == 0:
@@ -50,6 +106,10 @@ def printDecimalToBinary(n):
 
     printDecimalToBinary(n // 2)
     print(n % 2, end="")
+
+    # in this we are reducing n by dividing with 2 and printing the n by moding with 2 in reverse order i.e. non-tail recursive way, so it will print in reverse manner.
+
+    # Output - 1010
 
 
 def printStars(n, x):
@@ -59,6 +119,14 @@ def printStars(n, x):
     print("*" * x)
     printStars(n - 1, x)
 
+    # Output -
+
+    # *****
+    # *****
+    # *****
+    # *****
+    # *****
+
 
 def print1toNStars(n, x):
     if n == 0:
@@ -67,6 +135,14 @@ def print1toNStars(n, x):
     print("*" * x)
     print1toNStars(n - 1, x + 1)
 
+    # Output -
+
+    # *
+    # **
+    # ***
+    # ****
+    # *****
+
 
 def printNto1Stars(n):
     if n == 0:
@@ -74,6 +150,14 @@ def printNto1Stars(n):
 
     print("*" * n)
     printNto1Stars(n - 1)
+
+    # Output -
+
+    # *****
+    # ****
+    # ***
+    # **
+    # *
 
 
 def printNto1LadderRow(n):
