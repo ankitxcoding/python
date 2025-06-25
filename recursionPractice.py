@@ -190,18 +190,17 @@ def print1toNLadderRow(n):
     # 55555
 
 
-def print_row(k):
-    if k == 0:
-        return
-    print_row(k - 1)
-    print(k, end="")
-
-
 def printNto1LadderCol(n):
+    def printRow(k):
+        if k == 0:
+            return
+        printRow(k - 1)
+        print(k, end="")
+
     if n == 0:
         return
     printNto1LadderCol(n - 1)
-    print_row(n)
+    printRow(n)
     print()
 
 
