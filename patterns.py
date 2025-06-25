@@ -159,7 +159,7 @@ def triangleStarsUpSideDown(n):
     #     *
 
 
-def starsLdderUpSideDown(n):
+def starsLadderUpSideDown(n):
     for i in range(2 * n):
         if i < n:
             print("*" * (i + 1))
