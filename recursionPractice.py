@@ -190,16 +190,18 @@ def print1toNLadderRow(n):
     # 55555
 
 
-def printNto1LadderCol(n):
+def print1ToNLadderCol(n):
     def printRow(k):
         if k == 0:
             return
+
         printRow(k - 1)
         print(k, end="")
 
     if n == 0:
         return
-    printNto1LadderCol(n - 1)
+
+    print1ToNLadderCol(n - 1)
     printRow(n)
     print()
 
@@ -210,6 +212,70 @@ def printNto1LadderCol(n):
     # 123
     # 1234
     # 12345
+
+
+def print1ToNLadderColInverse(n):
+    def printRow(k):
+        if k == 0:
+            return
+
+        printRow(k - 1)
+        print(k, end="")
+
+    if n == 0:
+        return
+
+    printRow(n)
+    print()
+    print1ToNLadderColInverse(n - 1)
+
+    # Output -
+
+    # 12345
+    # 1234
+    # 123
+    # 12
+    # 1
+
+
+def printNto1LadderCol(n):
+    def printRow(k):
+        if k == 0:
+            return
+
+        print(k, end="")
+        printRow(k - 1)
+
+    if n == 0:
+        return
+
+    printNto1LadderCol(n - 1)
+    printRow(n)
+    print()
+
+
+def printNto1LadderColInverse(n):
+    def printRow(k):
+        if k == 0:
+            return
+
+        print(k, end="")
+        printRow(k - 1)
+
+    if n == 0:
+        return
+
+    printRow(n)
+    print()
+    printNto1LadderColInverse(n - 1)
+
+    # Output -
+
+    # 54321
+    # 4321
+    # 321
+    # 21
+    # 1
 
 
 n = int(input())
@@ -236,4 +302,10 @@ n = int(input())
 
 # print1toNLadderRow(n)
 
+# print1ToNLadderCol(n)
+
+# print1ToNLadderColInverse(n)
+
 printNto1LadderCol(n)
+
+# printNto1LadderColInverse(n)
