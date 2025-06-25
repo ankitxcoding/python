@@ -37,7 +37,7 @@ def starsLadderInvert(n):
     # *
 
 
-def numbers1toNLadderRow(n):
+def numbers1toNLadderCol(n):
     for row in range(n):
         for col in range(row + 1):
             print(col + 1, end="")
@@ -52,7 +52,7 @@ def numbers1toNLadderRow(n):
     # 12345
 
 
-def numbers1toNLadderRowInvert(n):
+def numbers1toNLadderColInvert(n):
     for row in range(n):
         for col in range(n - row):
             print(col + 1, end="")
@@ -67,7 +67,7 @@ def numbers1toNLadderRowInvert(n):
     # 1
 
 
-def numbers1toNLadderCol(n):
+def numbers1toNLadderRow(n):
     for row in range(n):
         for col in range(row + 1):
             print(row + 1, end="")
@@ -82,7 +82,7 @@ def numbers1toNLadderCol(n):
     # 55555
 
 
-def numbers1toNLadderColInvert(n):
+def numbers1toNLadderRowInvert(n):
     for row in range(n):
         for col in range(n - row):
             print(n - row, end="")
@@ -182,20 +182,16 @@ def starsLdderUpSideDown(n):
 def oneZeroTrianglePattern(n):
     for row in range(n):
         for col in range(row + 1):
-            print(((row + col) + 1) % 2, end="  ")
-        print("\n")
+            print(((row + col) + 1) % 2, end=" ")
+        print()
 
     # Output -
 
     # 1
-
-    # 0  1
-
-    # 1  0  1
-
-    # 0  1  0  1
-
-    # 1  0  1  0 1
+    # 0 1
+    # 1 0 1
+    # 0 1 0 1
+    # 1 0 1 0 1
 
 
 def numbersMirrorPattern(n):
@@ -221,21 +217,17 @@ def numberCountingPattern(n):
     count = 1
     for row in range(n):
         for col in range(row + 1):
-            print(count, end="  ")
+            print(count, end=" ")
             count += 1
-        print("\n")
+        print()
 
     # Output -
 
     # 1
-
-    # 2  3
-
-    # 4  5  6
-
-    # 7  8  9  10
-
-    # 11  12  13  14  15
+    # 2 3
+    # 4 5 6
+    # 7 8 9 10
+    # 11 12 13 14 15
 
 
 def charactarLadderCol(n):
@@ -312,20 +304,16 @@ def charactarTrianglePattern(n):
 def charactarLadderMix(n):
     for row in range(n):
         for col in range(row + 1, 0, -1):
-            print(chr(ord("A") + (n - col)), end="  ")
-        print("\n")
+            print(chr(ord("A") + (n - col)), end="")
+        print()
 
     # Output -
 
     # E
-
-    # D  E
-
-    # C  D  E
-
-    # B  C  D  E
-
-    # A  B  C  D  E
+    # DE
+    # CDE
+    # BCDE
+    # ABCDE
 
 
 def hollowDimongStars(n):
@@ -439,13 +427,13 @@ n = int(input())  # All outputs are for the n = 5
 
 # starsLadderInvert(n)
 
-# numbers1toNLadderRow(n)
-
-# numbers1toNLadderRowInvert(n)
-
 # numbers1toNLadderCol(n)
 
 # numbers1toNLadderColInvert(n)
+
+# numbers1toNLadderRow(n)
+
+# numbers1toNLadderRowInvert(n)
 
 # triangleStars(n)
 

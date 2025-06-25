@@ -190,12 +190,19 @@ def print1toNLadderRow(n):
     # 55555
 
 
-def printNto1LadderCol(n, x):
+def print_row(k):
+    if k == 0:
+        return
+    print_row(k - 1)
+    print(k, end="")
+
+
+def printNto1LadderCol(n):
     if n == 0:
         return
-
-    print(str(x))
-    printNto1LadderCol(n - 1, x + 1)
+    printNto1LadderCol(n - 1)
+    print_row(n)
+    print()
 
 
 n = int(input())
@@ -222,4 +229,4 @@ n = int(input())
 
 # print1toNLadderRow(n)
 
-printNto1LadderCol(n, 1)
+printNto1LadderCol(n)
