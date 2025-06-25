@@ -203,6 +203,14 @@ def printNto1LadderCol(n):
     printRow(n)
     print()
 
+    # Output -
+
+    # 1
+    # 12
+    # 123
+    # 1234
+    # 12345
+
 
 n = int(input())
 
