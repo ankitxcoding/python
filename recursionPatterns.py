@@ -454,11 +454,11 @@ def countingNumbers(n, k=1, x=1):
     # 11 12 13 14 15
 
 
-def charactarLadderRow(n):
+def characterLadderRow(n):
     if n == 0:
         return
 
-    charactarLadderRow(n - 1)
+    characterLadderRow(n - 1)
     print(chr(ord("A") + (n - 1)) * n)
 
     # Output -
@@ -470,12 +470,12 @@ def charactarLadderRow(n):
     # EEEEE
 
 
-def charactarLadderRowInverse(n):
+def characterLadderRowInverse(n):
     if n == 0:
         return
 
     print(chr(ord("A") + (n - 1)) * n)
-    charactarLadderRowInverse(n - 1)
+    characterLadderRowInverse(n - 1)
 
     # Output -
 
@@ -486,7 +486,7 @@ def charactarLadderRowInverse(n):
     # A
 
 
-def charactarLadderCol(n):
+def characterLadderCol(n):
     def printRow(k):
         if k == 0:
             return
@@ -497,7 +497,7 @@ def charactarLadderCol(n):
     if n == 0:
         return
 
-    charactarLadderCol(n - 1)
+    characterLadderCol(n - 1)
     printRow(n)
     print()
 
@@ -510,7 +510,7 @@ def charactarLadderCol(n):
     # ABCDE
 
 
-def charactarLadderColInverse(n):
+def characterLadderColInverse(n):
     def printRow(k):
         if k == 0:
             return
@@ -523,7 +523,7 @@ def charactarLadderColInverse(n):
 
     printRow(n)
     print()
-    charactarLadderColInverse(n - 1)
+    characterLadderColInverse(n - 1)
 
     # Output -
 
@@ -532,6 +532,30 @@ def charactarLadderColInverse(n):
     # ABC
     # AB
     # A
+
+
+def characterLadderMix(n, k=1):
+    def printRow(x, y):
+        if x > y:
+            return
+
+        print(chr(ord("A") + x), end="")
+        printRow(x + 1, y)
+
+    if k > n:
+        return
+
+    printRow(n - k, n - 1)
+    print()
+    characterLadderMix(n, k + 1)
+
+    # Output -
+
+    # E
+    # DE
+    # CDE
+    # BCDE
+    # ABCDE
 
 
 n = int(input())
@@ -580,10 +604,12 @@ n = int(input())
 
 # countingNumbers(n)
 
-# charactarLadderRow(n)
+# characterLadderRow(n)
 
-# charactarLadderRowInverse(n)
+# characterLadderRowInverse(n)
 
-# charactarLadderCol(n)
+# characterLadderCol(n)
 
-charactarLadderColInverse(n)
+# characterLadderColInverse(n)
+
+characterLadderMix(n)
