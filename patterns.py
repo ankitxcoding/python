@@ -230,7 +230,7 @@ def numberCountingPattern(n):
     # 11 12 13 14 15
 
 
-def charactarLadderCol(n):
+def characterLadderCol(n):
     for row in range(n):
         for col in range(row + 1):
             print(chr(ord("A") + col), end="")
@@ -245,7 +245,7 @@ def charactarLadderCol(n):
     # ABCDE
 
 
-def charactarLadderColInvert(n):
+def characterLadderColInvert(n):
     for row in range(n):
         for col in range(n - row):
             print(chr(ord("A") + col), end="")
@@ -260,7 +260,7 @@ def charactarLadderColInvert(n):
     # A
 
 
-def charactarLadderRow(n):
+def characterLadderRow(n):
     for row in range(n):
         for col in range(row + 1):
             print(chr(ord("A") + row), end="")
@@ -275,7 +275,7 @@ def charactarLadderRow(n):
     # EEEEE
 
 
-def charactarLadderRowInvert(n):
+def characterLadderRowInvert(n):
     for row in range(n):
         for col in range(n - row):
             print(chr(ord("A") + row), end="")
@@ -290,7 +290,7 @@ def charactarLadderRowInvert(n):
     # E
 
 
-def charactarTrianglePattern(n):
+def characterTrianglePattern(n):
     for row in range(n):
         for spaces in range(n - row):
             print(" ", end="")
@@ -309,7 +309,7 @@ def charactarTrianglePattern(n):
     #  ABCDEDCBA
 
 
-def charactarLadderMix(n):
+def characterLadderMix(n):
     for row in range(n):
         for col in range(row + 1, 0, -1):
             print(chr(ord("A") + (n - col)), end="")
@@ -457,17 +457,17 @@ n = int(input())  # All outputs are for the n = 5
 
 # numberCountingPattern(n)
 
-# charactarLadderCol(n)
+# characterLadderCol(n)
 
-# charactarLadderColInvert(n)
+# characterLadderColInvert(n)
 
-# charactarLadderRow(n)
+# characterLadderRow(n)
 
-# charactarLadderRowInvert(n)
+# characterLadderRowInvert(n)
 
-# charactarTrianglePattern(n)
+# characterTrianglePattern(n)
 
-# charactarLadderMix(n)
+# characterLadderMix(n)
 
 # hollowDimongStars(n)
 
