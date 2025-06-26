@@ -465,7 +465,7 @@ n = int(input())  # All outputs are for the n = 5
 
 # charactarLadderRowInvert(n)
 
-charactarTrianglePattern(n)
+# charactarTrianglePattern(n)
 
 # charactarLadderMix(n)
 
@@ -475,4 +475,4 @@ charactarTrianglePattern(n)
 
 # hollowStars(n)
 
-# theUltimateMatrixPattern(n)
+theUltimateMatrixPattern(n)
