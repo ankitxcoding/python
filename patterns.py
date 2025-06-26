@@ -300,6 +300,14 @@ def charactarTrianglePattern(n):
             print(chr(ord("A") + (col - 1)), end="")
         print()
 
+    # Output -
+
+    #      A
+    #     ABA
+    #    ABCBA
+    #   ABCDCBA
+    #  ABCDEDCBA
+
 
 def charactarLadderMix(n):
     for row in range(n):
@@ -457,7 +465,7 @@ n = int(input())  # All outputs are for the n = 5
 
 # charactarLadderRowInvert(n)
 
-# charactarTrianglePattern(n)
+charactarTrianglePattern(n)
 
 # charactarLadderMix(n)
 
@@ -467,4 +475,4 @@ n = int(input())  # All outputs are for the n = 5
 
 # hollowStars(n)
 
-theUltimateMatrixPattern(n)
+# theUltimateMatrixPattern(n)
