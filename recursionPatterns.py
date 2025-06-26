@@ -454,6 +454,86 @@ def countingNumbers(n, k=1, x=1):
     # 11 12 13 14 15
 
 
+def charactarLadderRow(n):
+    if n == 0:
+        return
+
+    charactarLadderRow(n - 1)
+    print(chr(ord("A") + (n - 1)) * n)
+
+    # Output -
+
+    # A
+    # BB
+    # CCC
+    # DDDD
+    # EEEEE
+
+
+def charactarLadderRowInverse(n):
+    if n == 0:
+        return
+
+    print(chr(ord("A") + (n - 1)) * n)
+    charactarLadderRowInverse(n - 1)
+
+    # Output -
+
+    # EEEEE
+    # DDDD
+    # CCC
+    # BB
+    # A
+
+
+def charactarLadderCol(n):
+    def printRow(k):
+        if k == 0:
+            return
+
+        printRow(k - 1)
+        print(chr(ord("A") + (k - 1)), end="")
+
+    if n == 0:
+        return
+
+    charactarLadderCol(n - 1)
+    printRow(n)
+    print()
+
+    # Output -
+
+    # A
+    # AB
+    # ABC
+    # ABCD
+    # ABCDE
+
+
+def charactarLadderColInverse(n):
+    def printRow(k):
+        if k == 0:
+            return
+
+        printRow(k - 1)
+        print(chr(ord("A") + (k - 1)), end="")
+
+    if n == 0:
+        return
+
+    printRow(n)
+    print()
+    charactarLadderColInverse(n - 1)
+
+    # Output -
+
+    # ABCDE
+    # ABCD
+    # ABC
+    # AB
+    # A
+
+
 n = int(input())
 
 # printNto1(n)
@@ -498,4 +578,12 @@ n = int(input())
 
 # numbersMirrorPattern(n)
 
-countingNumbers(n)
+# countingNumbers(n)
+
+# charactarLadderRow(n)
+
+# charactarLadderRowInverse(n)
+
+# charactarLadderCol(n)
+
+charactarLadderColInverse(n)
